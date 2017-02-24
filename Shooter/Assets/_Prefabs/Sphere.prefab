@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013716546240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -90,11 +90,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098ffe98f599ced4d9e4b4cda5f3ce35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   pausePanel: {fileID: 1000011941229694, guid: 7da29c7378d3abd45a92364ed9712582, type: 2}
   portalParticle: {fileID: 1000010484840826, guid: cfc097a2c07842c4e8400443c14df9d9,
     type: 2}
   spaceParticle: {fileID: 1000012534912332, guid: 5adaf56eb62b72a428f1019b304b1438,
     type: 2}
+  trigger: {fileID: 1000013054886854, guid: e9928b2b263b9624490ab414f2d935a5, type: 2}
   isPaused: 0
 --- !u!135 &135000013151114004
 SphereCollider:

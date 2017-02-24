@@ -2,52 +2,49 @@
 using System.Collections;
 
 
-public class popUp : MonoBehaviour {
-
+public class popUp : MonoBehaviour
+{
     public GameObject pausePanel;
     public GameObject portalParticle;
     public GameObject spaceParticle;
     public bool isPaused;
 
-	void Start () {
+    static private Vector3 trigPos;
+
+    void Start()
+    {
         pausePanel.SetActive(false);
         portalParticle.SetActive(false);
         spaceParticle.SetActive(false);
+        trigPos = Vector3.zero;
 
-	    isPaused = false;
-	}
-
-	void Update () {
-        if (Input.GetKeyDown("p"))
-        {
-            isPaused = !isPaused;
-            pausePanel.SetActive(isPaused);
-        }
-	}
+        isPaused = false;
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPaused = true;
+            trigPos = transform.position;
             pausePanel.SetActive(isPaused);
-            Debug.Log("I'm triggered");
         }
     }
+
 
     public void Portal()
     {
         portalParticle.SetActive(true);
-        pausePanel.SetActive(false);
+        GameObject clone = Instantiate(portalParticle, trigPos, Quaternion.identity) as GameObject;
     }
 
-   public void Space()
+    public void Space()
     {
         spaceParticle.SetActive(true);
-        pausePanel.SetActive(false);
+        GameObject clone = Instantiate(spaceParticle, transform.position, Quaternion.identity) as GameObject;
     }
 
-   public void ExitMenu()
+    public void ExitMenu()
     {
         pausePanel.SetActive(false);
     }

@@ -80,9 +80,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\_Scripts\MouseMovement.cs" />
     <Compile Include="Assets\_Scripts\PlayerScript.cs" />
-    <Compile Include="Assets\_Scripts\menuTrigger.cs" />
     <Compile Include="Assets\_Scripts\popUp.cs" />
-    <Compile Include="Assets\triggered.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

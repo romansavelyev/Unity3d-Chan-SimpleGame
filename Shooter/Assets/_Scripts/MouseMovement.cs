@@ -30,7 +30,7 @@ public class MouseMovement : MonoBehaviour {
     {
         var playerPlane = new Plane(Vector3.up, transform.position);
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (particleMenu.active == false)
+        if (GameObject.Find("Panel(Clone)") == null)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
